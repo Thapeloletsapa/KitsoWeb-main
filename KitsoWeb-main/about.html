@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-with, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Kitsong Independant School</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"
+          ><img src="assets/Kitsong Independat School.png"
+        /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="course.html">Course</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>About us</h1>
+    </section>
+
+    <!-----about us content ------>
+
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h1>
+            Affordable high quality education for all children.
+          </h1>
+          <p>
+            Kitsong School is an independent school that was established in 2015 
+            to make quality education accessible to all children in the Royal Bafokeng 
+            Nation(RBN).
+            This School is under Royal Bafokeng Institute (RBI).
+          </p>
+          <a
+            href="https://web.facebook.com/Kitsongschool"
+            class="hero-btn red-btn"
+            >EXPLORE NOW</a
+          >
+        </div>
+        <div class="about-col">
+          <img src="assets/about 2.jpg" />
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="values">
+      <h1>Core Values</h1>
+<div class="values-logos">
+  <img src="assets/knowledge.png" />
+  <img src="assets/innovation.png" />
+  <img src="assets/teamwork.png" />
+</div>
+    </section>
+
+
+
+
+
+    <section>
+      <div class="row">
+        <div class="scope-col">
+          <h3>Education</h3>
+          <div class="content">
+            <p>
+              Kitsong employs highly qualified graduate teachers who are passionate 
+              about education and demonstrate innovation and enthusiasm in everything they do.
+            </p>
+            <p>
+              The school facilities are well-equipped to support our stimulating curriculum, 
+              with a particular focus on mathematics and science.
+            </p>
+            <p>
+              The school currently offers Grades R–4 and 8–12 and has been in the process of expanding 
+              since 2020. It plans to offer Grade 5 in 2024, Grade 6 and Grade 7 by 2026.
+            </p>
+          </div>
+        </div>
+
+        <div class="scope-col">
+          <h3>Curriculum</h3>
+          <div class="content">
+            <p>
+              One of the most critical skills shortages in South Africa is in Science and Technology, 
+              particularly Engineering.
+            </p>
+            <p>
+              Kitsong school provides a <span>CURRICULUM ASSESSMENT POLICY STATEMENT (CAPS)</span>
+              programme that is strongly focused on mathematics, Science, Information Technology and Languages,
+              but it also gives its scholars excellent preparation for any tertiary study in South Africa or 
+              worldwide.
+            </p>
+            <p>
+              Our learners write the Independent Examinations Board (IEB) examinations.
+            </p>
+          </div>
+        </div>
+
+        <div class="scope-col">
+          <h3> Information Technology </h3>
+          <div class="content">
+            <p>
+              Every learner is required to have a tablet which they use in class under the guidance of teachers
+              for various tasks. Classrooms are equipped with data projectors and whiteboards and learners are taught in a blended 
+              environment.
+            </p>
+            <p>
+              Our assessments are written via computers and also through other traditional methods.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------  Footer ----------->
+
+    <section class="footer">
+      <h4>About us</h4>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-youtube"></i>
+      </div>
+      <p>
+        Maded with<i class="fa fa-heart-o"></i> by<br />
+        <a href="https://www.linkedin.com/in/thapeloletsapa">Thapelo Letsapa</a>
+      </p>
+    </section>
+
+    <!--Java Script for toggle menu-->
+    <script>
+      // Menu toggle
+      var navLinks = document.getElementById("navLinks");
+  
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+  
+      // Dropdown functionality with single card open at a time
+      document.querySelectorAll('.scope-col').forEach(card => {
+        const title = card.querySelector('h3');
+        const content = card.querySelector('.content');
+        
+        // Set initial state
+        content.style.maxHeight = "0px";
+        
+        title.addEventListener('click', () => {
+          const isActive = card.classList.contains('active');
+          
+          // Close all cards first
+          document.querySelectorAll('.scope-col').forEach(otherCard => {
+            otherCard.classList.remove('active');
+            otherCard.querySelector('.content').style.maxHeight = "0px";
+          });
+          
+          // If the clicked card wasn't active, open it
+          if (!isActive) {
+            card.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
