@@ -376,6 +376,12 @@ h3{
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
+  .about-col1 img {
+    width: 80%;
+    border-radius: 10px;
+ 
+  }
+
   .about-col h1 {
     padding-top: 0;
     color: #333;
@@ -736,4 +742,70 @@ background: #f0f0f0;
     outline: none;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+/*--- Admissions ---*/
+.admission-table-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.admission-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admission-table thead {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.admission-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.fee-note {
+  font-weight: normal;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.admission-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.admission-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admission-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .admission-table {
+      box-shadow: none;
+  }
+  
+  .admission-table th,
+  .admission-table td {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+  }
+  
+  .fee-note {
+      display: block;
+      margin-top: 0.25rem;
+  }
 }
