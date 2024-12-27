@@ -377,9 +377,13 @@ h3{
   }
 
   .about-col1 img {
-    width: 80%;
-    border-radius: 10px;
+    width: 100%;
+    flex-basis: 48%;
  
+  }
+  .about-col1 {
+    flex-basis: 48%;
+    padding: 30px 2px;
   }
 
   .about-col h1 {
