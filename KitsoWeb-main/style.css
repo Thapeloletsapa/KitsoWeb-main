@@ -813,3 +813,38 @@ background: #f0f0f0;
       margin-top: 0.25rem;
   }
 }
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.admission-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 0.5rem;
+}
+
+p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .container1 {
+      padding: 1rem;
+  }
+  
+  .admission-section {
+      padding: 1.5rem;
+  }
+}
