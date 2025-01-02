@@ -34,6 +34,49 @@
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="admissions.html">Admissions</a></li>
             <li><a href="about.html">About</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">Explore</button>
+              <div class="dropdown-content">
+                  <div class="subjects-menu">
+                      <button onclick="openModal('highSchool')" class="menu-item">High School</button>
+                      <button onclick="openModal('primarySchool')" class="menu-item">Primary School</button>
+                  </div>
+              </div>
+          </div>
+
+ <!-- High School Modal -->
+ <div id="highSchool" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Grade 7 - 9</h2>
+      <table>
+          <tr><td>English (Home Language)</td></tr>
+          <tr><td>Setswana (First Additional Language)</td></tr>
+          <tr><td>Life Orientation</td></tr>
+          <tr><td>Mathematics</td></tr>
+          <tr><td>Natural Science</td></tr>
+          <tr><td>Social Science Technology</td></tr>
+          <tr><td>EMS</td></tr>
+          <tr><td>Creative Arts</td></tr>
+      </table>
+
+      <h2>Grade 10 - 12</h2>
+      <table>
+          <tr><td>English (Home Language)</td></tr>
+          <tr><td>Setswana (First Additional Language)</td></tr>
+          <tr><td>Life Orientation</td></tr>
+          <tr><td>Mathematics</td></tr>
+          <tr><td>Mathematical Literacy</td></tr>
+          <tr><td>Life Science</td></tr>
+          <tr><td>Physical Science</td></tr>
+          <tr><td>Geography</td></tr>
+          <tr><td>Information Technology</td></tr>
+          <tr><td>Engineering Graphics and Design</td></tr>
+          <tr><td>Dramatic Arts</td></tr>
+      </table>
+  </div>
+</div>
+
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -239,6 +282,30 @@
       function hideMenu() {
         navLinks.style.right = "-200px";
       }
+
+      function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+// Close modal when clicking the x button or outside the modal
+document.addEventListener('DOMContentLoaded', function() {
+    var modals = document.getElementsByClassName('modal');
+    var closes = document.getElementsByClassName('close');
+
+    for (let close of closes) {
+        close.onclick = function() {
+            this.parentElement.parentElement.style.display = "none";
+        }
+    }
+
+    window.onclick = function(event) {
+        for (let modal of modals) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
+});
     </script>
   </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Subjects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">Explore</button>
+                <div class="dropdown-content">
+                    <div class="subjects-menu">
+                        <button onclick="openModal('highSchool')" class="menu-item">High School</button>
+                        <button onclick="openModal('primarySchool')" class="menu-item">Primary School</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- High School Modal -->
+    <div id="highSchool" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Grade 7 - 9</h2>
+            <table>
+                <tr><td>English (Home Language)</td></tr>
+                <tr><td>Setswana (First Additional Language)</td></tr>
+                <tr><td>Life Orientation</td></tr>
+                <tr><td>Mathematics</td></tr>
+                <tr><td>Natural Science</td></tr>
+                <tr><td>Social Science Technology</td></tr>
+                <tr><td>EMS</td></tr>
+                <tr><td>Creative Arts</td></tr>
+            </table>
+
+            <h2>Grade 10 - 12</h2>
+            <table>
+                <tr><td>English (Home Language)</td></tr>
+                <tr><td>Setswana (First Additional Language)</td></tr>
+                <tr><td>Life Orientation</td></tr>
+                <tr><td>Mathematics</td></tr>
+                <tr><td>Mathematical Literacy</td></tr>
+                <tr><td>Life Science</td></tr>
+                <tr><td>Physical Science</td></tr>
+                <tr><td>Geography</td></tr>
+                <tr><td>Information Technology</td></tr>
+                <tr><td>Engineering Graphics and Design</td></tr>
+                <tr><td>Dramatic Arts</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Primary School Modal -->
+    <div id="primarySchool" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Primary School</h2>
+            <p>Kitsong School provides a holistic primary school programme in a safe and nurturing environment while promoting the physical,
+                 social, emotional, and intellectual development of children.
+                  Our carefully thought out programme provides CURRICULUM ASSESSMENT POLICY STATEMENT (CAPS) that is enhanced by other programs like Khan Academy A - Z learning and ABACUS.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
