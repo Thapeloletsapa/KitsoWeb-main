@@ -60,31 +60,157 @@
         With pride and anticipation, Dr Elmie Castleman Board Chairperson
       </p>
 
-      <div class="row">
-        <div class="scope-col 1">
-          <h3>Principal's Letter</h3>
-          <p>
-            <img src="assets/Principal.jpeg" />
-Mme Olga Motshwanedi-Marimo Kitsong Schools of The Royal Bafokeng Principal
-          </p>
+<div class="scope">
+    <div class="row">
+        <!-- Principal's Letter -->
+        <div class="scope-col" onclick="openModal()">
+            <h3>Principal's Letter</h3>
+            <img src="assets/Principal.jpeg" alt="Principal"/>
+            <p>Mme Olga Motshwanedi-Marimo<br>
+                Kitsong Schools of The Royal Bafokeng<br>
+                Principal</p>
         </div>
 
-        <div class="scope-col 2">
-          <h3>Deputy's Letter</h3>
-          <p>
-            <img src="assets/Deputy.jpeg" />
-Rre Yaw Fosu-Amoah Kitsong Schools of The Royal Bafokeng Deputy Principal
-          </p>
+        <!-- Deputy's Letter -->
+        <div class="scope-col" onclick="openDeputyModal()">
+            <h3>Deputy's Letter</h3>
+            <img src="assets/Deputy.jpeg" alt="Deputy Principal"/>
+            <p>Rre Yaw Fosu-Amoah<br>
+                Kitsong Schools of The Royal Bafokeng<br>
+                Deputy Principal</p>
         </div>
 
-        <div class="scope-col 3">
-          <h3>Staff letter</h3>
-          <p>
-            <img src="assets/Staff.jpg" />
-As a team we believe in making personal <strong>Development Personal</strong>
-          </p>
+        <!-- Staff Letter -->
+        <div class="scope-col" onclick="openStaffModal()">
+            <h3>Staff Letter</h3>
+            <img src="assets/Staff.jpg" alt="Staff"/>
+            <p>As a team we believe in making personal <strong>Development Personal</strong></p>
         </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="principalModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        
+        <div class="principal-header">
+          <img src="assets/Principal.jpeg" alt=" Principal" class="principal-img"/>
+          <div class="principal-info">
+              <h3>Mme Olga Motshwanedi-Marimo</h3>
+              <p>Kitsong Schools of The Royal Bafokeng</p>
+              <p>Principal</p>
+          </div>
       </div>
+
+       
+
+        <div class="letter-content">
+            <p>As we embark on another exciting year here at Kitsong Schools of the Royal Bafokeng, I am filled with immense pride and gratitude for the journey we have undertaken together. Since assuming the role of Principal in 2020, it has been my privilege to witness the growth and achievements of our school community, from our humble beginnings in the foundation phase to the outstanding accomplishments of our matriculants.</p>
+            
+            <p>I am filled with pride and optimism as we reflect on the remarkable journey of growth and achievement we have undertaken together. Since its inception in 2020 with Grade R, our primary school has flourished, expanding to encompass Grade 5 in 2024. This expansion not only symbolises our commitment to providing quality education but also reflects our unwavering dedication to nurturing the holistic development of every child entrusted to our care.</p>
+            
+            <p>I am thrilled to announce that in 2023, our matriculation results soared to new heights, with a remarkable improvement to a 100% pass rate, and an impressive 79% achieving bachelor pass. This incredible achievement is a testament to the dedication and hard work of our students, the unwavering support of our parents, and the tireless efforts of our exceptional teaching and administrative staff.</p>
+            
+            <p>In the face of unprecedented challenges posed by the COVID-19 pandemic, our school community demonstrated remarkable resilience and adaptability. Through innovative e-learning initiatives and a steadfast commitment to delivering a quality education, we navigated through these uncertain times together, emerging stronger and more united than ever before.</p>
+            
+            <p>Furthermore, I am pleased to share that our school has continued to excel under the guidance of the Independent Examination Board, maintaining rigorous academic standards while fostering a nurturing and inclusive learning environment. We remain steadfast in our commitment to promoting Setswana language and culture, while ensuring that proficiency in English remains a cornerstone of our educational philosophy.</p>
+            
+            <p>As we look towards the future, our mission remains unchanged: to provide all students with access to a world-class education that nurtures their talents, fosters their intellectual curiosity, and empowers them to become compassionate and responsible global citizens.</p>
+            
+            <p>I extend my heartfelt gratitude to each and every member of our school community for your unwavering dedication, passion, and commitment to excellence. Together, we will continue to uphold the proud legacy of Kitsong Schools of the Royal Bafokeng and inspire future generations to reach for the stars.</p>
+            
+            <div class="quote">
+                <p>Coming together is the beginning.</p>
+                <p>Keeping together is progress.</p>
+                <p>Working together is success.</p>
+                <p class="quote-author">-Henry Ford</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Deputy Principal Modal -->
+ 
+<div id="deputyModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeDeputyModal()">&times;</span>
+      
+      <div class="principal-header">
+          <img src="assets/Deputy.jpeg" alt="Deputy Principal" class="principal-img"/>
+          <div class="principal-info">
+              <h3>Rre Yaw Fosu-Amoah</h3>
+              <p>Kitsong Schools of The Royal Bafokeng</p>
+              <p>Deputy Principal</p>
+          </div>
+      </div>
+
+      <div class="letter-content">
+          <h2 class="letter-title">Celebrating Resilience and Excellence</h2>
+          
+          <p>Kitsong strives to make an indelible mark in the Phokeng and greater Rustenburg community. We must acknowledge the relentless pursuit of excellence that defines Kitsong Schools of the Royal Bafokeng, this is evident in the remarkable academic achievements of the Class of 2023 for attaining a 100% pass rate in their final examinations.</p>
+          
+          <p>This achievement is a testament to the unwavering dedication and commitment of our students, teachers, and support staff. It reflects the collective effort and hard work that has been invested in ensuring that every student receives the necessary support and guidance to excel academically. We are committed to maintaining and even surpassing this standard of academic success in the years to come. Our goal is not only to meet expectations but to exceed them, setting new benchmarks for academic excellence and student achievement.</p>
+          
+          <p>At Kitsong Schools, we are dedicated to doing more with less, ensuring that our students receive the best possible educational experience within the confines of our school fees range. We understand the importance of providing quality education that is accessible and affordable to all members of our community.</p>
+          
+          <p>One of our values as a school is team work, we strive to create healthy connections between our educators, learners and parents to foster a love for learning. Our educators go above and beyond to make every learner feel valued and empowered to reach their full potential.</p>
+          
+          <p>Furthermore, our learners understand the importance of being globally relevant in today's interconnected world. Opportunity presents itself in many forms and therefore exposing our learners through sports, culture, academic expos & excursions etc. affords learners of different abilities to feel a sense of belonging in our community.</p>
+          
+          <p>As we look towards the future, we remain steadfast in our commitment to excellence and innovation. Together, we will continue to uphold all the values that define Kitsong Schools of the Royal Bafokeng and inspire our students to reach new heights of success.</p>
+          
+          <div class="quote">
+              <p>Education is the passport to the future,</p>
+              <p>for tomorrow belongs to those who</p>
+              <p>prepare for it today.</p>
+              <p class="quote-author">-Malcolm X</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+   
+   
+
+<!-- Staff Letter Modal -->
+<div id="staffModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeStaffModal()">&times;</span>
+      
+      <div class="staff-header">
+          <h2 class="staff-title">Staff Letter</h2>
+          <img src="assets/Staff.jpg" alt="Staff" class="staff-img"/>
+      </div>
+
+      <div class="letter-content">
+          <p>In the year at Kitsong Schools of The Royal Bafokeng, our staff exemplified our core values of knowledge, innovation, teamwork, sacredness, optimism, nobility, and gratitude with remarkable dedication. Despite facing challenges, they demonstrated resilience and a steadfast commitment to our school community. Through their unwavering dedication, they imparted valuable knowledge to our students, fostering a culture of continuous learning and growth.</p>
+          
+          <p>Embracing innovation, they introduced creative teaching methods and embraced new technologies to enhance the educational experience. Teamwork was the cornerstone of their approach, as they collaborated seamlessly to support one another and ensure the success of our school's mission.</p>
+          
+          <p>Moreover, they infused their work with a sense of sacredness, recognising the profound impact of education in shaping young minds and souls. Their optimism and nobility shone through even in difficult times, inspiring both students and colleagues alike to persevere with grace and dignity.</p>
+          
+          <p>Additionally, their genuine gratitude for the privilege of educating future generations was evident in every interaction, fostering a culture of appreciation and kindness throughout the school community.</p>
+          
+          <p>Through their exemplary leadership and dedication, our staff not only overcame adversity but thrived in the face of it, leaving an indelible mark on the hearts and minds of all who passed through the halls of Kitsong Schools. Their commitment to our values serves as a guiding light, illuminating the path toward a brighter and more promising future for our students and our community as a whole.</p>
+          
+          <p>At Kitsong Schools, our commitment to excellence in education is exemplified through our emphasis on Continuous Professional Teaching Development (CPTD).</p>
+          
+          <p>Teachers are not only encouraged but actively supported in their pursuit of lifelong learning and professional growth. Through ongoing training sessions, workshops, and access to resources, our educators stay abreast of the latest pedagogical trends, instructional methodologies, and best practices in their respective fields.</p>
+          
+          <p>Moreover, the delegation of duties serves as an opportunity for skills transfer within our school. Teachers are entrusted with various responsibilities beyond the classroom, allowing them to develop leadership, organisational, and managerial skills. Whether leading committees, coordinating events, or spearheading initiatives, each role offers valuable opportunities for collaboration, innovation, and personal development.</p>
+          
+          <p>By fostering a community of lifelong learners, we ensure that our educators remain at the forefront of educational excellence, equipping them with the skills, knowledge, and passion needed to inspire and empower the next generation.</p>
+          
+          <div class="quote">
+              <p>As a team we believe</p>
+              <p>in making personal</p>
+              <p>Development Personal</p>
+          </div>
+      </div>
+  </div>
+</div>
     </section>
 
     <!-- Campus Section -->
@@ -255,6 +381,122 @@ As a team we believe in making personal <strong>Development Personal</strong>
           }
         };
       });
+    // Modal functionality
+    function openModal() {
+    const modal = document.getElementById("principalModal");
+    modal.style.display = "flex";  // Changed to flex for centering
+    document.body.style.overflow = "hidden";
+    
+    // Scroll modal content to top when opening
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.scrollTop = 0;
+    }
+}
+
+
+function closeModal() {
+    const modal = document.getElementById("principalModal");
+    modal.style.display = "none";
+    document.body.style.overflow = "visible";
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById("principalModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Close modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeModal();  // Use the same closeModal function
+    }
+});
+// Cleanup function to ensure scrolling is always restored
+window.addEventListener('load', function() {
+    document.body.style.overflow = "visible";
+});
+
+// Deputy Principal Modal Functions
+function openDeputyModal() {
+    const modal = document.getElementById("deputyModal");
+    modal.style.display = "flex";  // Use flex for centering
+    document.body.style.overflow = "hidden";
+    
+    // Scroll modal content to top when opening
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.scrollTop = 0;
+    }
+}
+
+function closeDeputyModal() {
+    const modal = document.getElementById("deputyModal");
+    modal.style.display = "none";
+    document.body.style.overflow = "visible";
+}
+
+// Close deputy modal when clicking outside
+window.onclick = function(event) {
+    const deputyModal = document.getElementById("deputyModal");
+    if (event.target === deputyModal) {
+        closeDeputyModal();
+    }
+}
+
+// Close deputy modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeDeputyModal();
+    }
+});
+
+// Prevent modal content clicks from closing the modal
+document.querySelector('#deputyModal .modal-content').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+// Staff Modal Functions
+function openStaffModal() {
+    const modal = document.getElementById("staffModal");
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    
+    // Scroll modal content to top when opening
+    const modalContent = modal.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.scrollTop = 0;
+    }
+}
+
+function closeStaffModal() {
+    const modal = document.getElementById("staffModal");
+    modal.style.display = "none";
+    document.body.style.overflow = "visible";
+}
+
+// Close staff modal when clicking outside
+window.onclick = function(event) {
+    const staffModal = document.getElementById("staffModal");
+    if (event.target === staffModal) {
+        closeStaffModal();
+    }
+}
+
+// Close staff modal with escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeStaffModal();
+    }
+});
+
+// Prevent modal content clicks from closing the modal
+document.querySelector('#staffModal .modal-content').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
     </script>
   </body>
 </html>
