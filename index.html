@@ -407,6 +407,7 @@ window.onclick = function(event) {
     if (event.target === modal) {
         closeModal();
     }
+   
 }
 
 // Close modal with escape key
@@ -414,10 +415,6 @@ document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
         closeModal();  // Use the same closeModal function
     }
-});
-// Cleanup function to ensure scrolling is always restored
-window.addEventListener('load', function() {
-    document.body.style.overflow = "visible";
 });
 
 // Deputy Principal Modal Functions
