@@ -173,54 +173,85 @@ h3{
 .scope-col:hover{
     box-shadow: 0 0 20px rgba(0 , 0 , 0 , 0.2);
 }
-
+.scope-col img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+.scope-col img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
 /*      Campus      */ 
 
-.campus{
-   width: 80%;
-   margin: auto;
-   text-align: center;
-   padding: 50px;
+.campus {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+  display: flex; /* Add Flexbox */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Add space between items */
+  justify-content: center; /* Center items horizontally */
 }
-.campus-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
+
+.campus-col {
+  flex-basis: 30%; /* Ensure columns take up 30% of the row */
+  max-width: 300px; /* Limit the maximum width */
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: transform 0.3s ease; /* Add hover effect */
 }
-.campus-col img{
-    width: 100%;
-    display: block;
+
+.campus-col:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
 }
-.layer{
-    background: transparent;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
-    transition: 0.5s;
+
+.campus-col img {
+  width: 100%;
+  display: block;
+  border-radius: 10px 10px 0 0; /* Round top corners */
 }
-.layer:hover{
-    background: rbga(226,0,0,0.7);
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background 0.5s ease, transform 0.5s ease;
+  z-index: 1; /* Ensure it's on top */
 }
-.layer h3{
-    width: 100%;
-    font-weight: 500;
-    color:black;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
+
+.layer:hover {
+  background: #f4d58d;; /* Corrected 'rbga' to 'rgba' */
 }
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: white; /* Better contrast for text */
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
 }
+
+.layer:hover h3 {
+  bottom: 50%; /* Center vertically */
+  opacity: 1;
+}
+
 /* Container for the cards */
 
 .row {
@@ -240,6 +271,8 @@ h3{
     text-align: center;
     padding-top: 100px;
 }
+
+
 
 /* Individual card styling */
 .facilities-col {
