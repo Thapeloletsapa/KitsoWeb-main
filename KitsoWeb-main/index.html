@@ -33,61 +33,19 @@
             <li><a href="gallery.html">GALLERY</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="ourvalues.html">Our values</a></li>
             <li><a href="about.html">About</a></li>
-            <div class="dropdown">
-              <button class="dropbtn">Explore</button>
-              <div class="dropdown-content">
-                  <div class="subjects-menu">
-                      <button onclick="openModal('highSchool')" class="menu-item">High School</button>
-                      <button onclick="openModal('primarySchool')" class="menu-item">Primary School</button>
-                  </div>
-              </div>
-          </div>
-
- <!-- High School Modal -->
- <div id="highSchool" class="modal">
-  <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Grade 7 - 9</h2>
-      <table>
-          <tr><td>English (Home Language)</td></tr>
-          <tr><td>Setswana (First Additional Language)</td></tr>
-          <tr><td>Life Orientation</td></tr>
-          <tr><td>Mathematics</td></tr>
-          <tr><td>Natural Science</td></tr>
-          <tr><td>Social Science Technology</td></tr>
-          <tr><td>EMS</td></tr>
-          <tr><td>Creative Arts</td></tr>
-      </table>
-
-      <h2>Grade 10 - 12</h2>
-      <table>
-          <tr><td>English (Home Language)</td></tr>
-          <tr><td>Setswana (First Additional Language)</td></tr>
-          <tr><td>Life Orientation</td></tr>
-          <tr><td>Mathematics</td></tr>
-          <tr><td>Mathematical Literacy</td></tr>
-          <tr><td>Life Science</td></tr>
-          <tr><td>Physical Science</td></tr>
-          <tr><td>Geography</td></tr>
-          <tr><td>Information Technology</td></tr>
-          <tr><td>Engineering Graphics and Design</td></tr>
-          <tr><td>Dramatic Arts</td></tr>
-      </table>
-  </div>
-</div>
-
+            
           </ul>
         </div>
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
       <div class="text-box">
-        <h1>Quality Schooling Made Accessible</h1>
+        <h1>Affordable high quality education for all children</h1>
         <p>
-          Kitsong was founded as a high school to offer quality education which
-          is accessible to anyone.<br />
-          This exciting new project is sponsored by the Royal Bafokeng.<br />
-          <a href="#" class="hero-btn">Visit Us To Know More</a>
+         <br />
+          <br />
+          <a href="about.html" class="hero-btn">About us</a>
         </p>
       </div>
     </section>
@@ -130,7 +88,7 @@
 
     <!-- Campus Section -->
 
-    <section  class="campus">
+    <section class="campus">
       <h1>Our Global Campus</h1>
       <p>
         Broader carriculum including sport, culture, leadership, spirituality
@@ -184,7 +142,8 @@
           <img src="assets/NBA.jpg" />
           <h3>NBA THEME: HER TIME TO PLAY!</h3>
           <p>
-            We're grateful for partners like MBA and RBS who support our mission to develop confident, ambitious, and determined young leaders.
+            We're grateful for partners like MBA and RBS who support our mission
+            to develop confident, ambitious, and determined young leaders.
           </p>
         </div>
 
@@ -192,7 +151,9 @@
           <img src="assets/literacy_day.jpg" />
           <h3>INTERNATIONAL LITERACY DAY CELEBRATION</h3>
           <p>
-            Our students had an incredible time participating in the speech, poetry, and spelling competitions, and we're beaming with pride at their achievements!
+            Our students had an incredible time participating in the speech,
+            poetry, and spelling competitions, and we're beaming with pride at
+            their achievements!
           </p>
         </div>
       </div>
@@ -216,7 +177,7 @@
               and dedication of its students at the recently concluded Achievers
               Tea
             </p>
-            <h3>Thapelo </h3>
+            <h3>Thapelo</h3>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -258,7 +219,9 @@
     <section class="footer">
       <h4>About Us</h4>
       <p>
-        Kitsong was founded as a high school to offer quality education which is accessible to anyone. This exciting new project is sponsored by the Royal Bafokeng
+        Kitsong was founded as a high school to offer quality education which is
+        accessible to anyone. This exciting new project is sponsored by the
+        Royal Bafokeng
       </p>
       <div class="icons">
         <i class="fa fa-facebook"></i>
@@ -284,28 +247,28 @@
       }
 
       function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
+        document.getElementById(modalId).style.display = "block";
+      }
 
-// Close modal when clicking the x button or outside the modal
-document.addEventListener('DOMContentLoaded', function() {
-    var modals = document.getElementsByClassName('modal');
-    var closes = document.getElementsByClassName('close');
+      // Close modal when clicking the x button or outside the modal
+      document.addEventListener("DOMContentLoaded", function () {
+        var modals = document.getElementsByClassName("modal");
+        var closes = document.getElementsByClassName("close");
 
-    for (let close of closes) {
-        close.onclick = function() {
+        for (let close of closes) {
+          close.onclick = function () {
             this.parentElement.parentElement.style.display = "none";
+          };
         }
-    }
 
-    window.onclick = function(event) {
-        for (let modal of modals) {
+        window.onclick = function (event) {
+          for (let modal of modals) {
             if (event.target == modal) {
-                modal.style.display = "none";
+              modal.style.display = "none";
             }
-        }
-    }
-});
+          }
+        };
+      });
     </script>
   </body>
 </html>
