@@ -287,30 +287,7 @@ h3{
 }
 
 /* Responsive design */
-@media screen and (max-width: 1024px) {
-  .row {
-      gap: 20px;
-      padding: 30px 15px;
-  }
-  
-  .facilities-col img {
-      height: 200px;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .row {
-      flex-direction: column;
-  }
-  
-  .facilities-col {
-      margin-bottom: 30px;
-  }
-  
-  .facilities-col img {
-      height: 220px;
-  }
-}
 
 /* TESTIMONIALS */
 
