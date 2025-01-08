@@ -138,7 +138,13 @@ nav .fa{
   margin: auto;
   text-align: center;
   padding: 60px 10px;
+ 
+  background: url('assets/Birds-background.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* This creates a parallax-like effect */
+  position: relative;
 }
+
 h1 {
   font-size: 32px;
   font-weight: 600;
@@ -164,7 +170,7 @@ p {
 /* Scope Column Styling */
 .scope-col {
   flex: 1 1 calc(33.33% - 20px); /* Flexible column sizing with spacing */
-  background: #fff3f3;
+  background-image:url('assets/background.jpeg');
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -475,7 +481,7 @@ h3 {
 
 /* Setting different background images for each campus-col */
 .campus-col:nth-child(1) {
-  background: url('assets/trimmed-name.jpg') no-repeat center center;
+  background: url('assets/student.jpg') no-repeat center center;
   background-size: cover;
 }
 
@@ -540,20 +546,35 @@ h3 {
   }
 }
 /*      Facilities  */
+/* Main section with background color */
 
-.facilities{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+
+/* Title styling */
+
+
+
+/* Facilities section */
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  background-color: #f4d58d;
+  width: 100%;
+  justify-content: center;
 }
 
-
+/* Row styling */
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
 
 /* Individual card styling */
 .facilities-col {
   flex: 1;
-  background: white;
+  background-image: url('assets/background.jpeg');
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

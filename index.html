@@ -53,15 +53,20 @@
     <!--Scope-->
 
     <section class="scope">
-      <h1>Board Chairperson's Letter</h1>
-      <img src="assets/Elmie.jpg" />
-      <p>
-       
-        With pride and anticipation, Dr Elmie Castleman Board Chairperson
-      </p>
+
+<!----  Board Chairperson  -->
 
 <div class="scope">
     <div class="row">
+
+      <div class="scope-col" onclick="openBoardModal()">
+        <h3>Board Chairperson's Letter</h3>
+        <img src="assets/Elmie.jpg" alt="Board Chairperson"/>
+        <p>Dr Elmie Castleman<br>
+            Kitsong Schools of The Royal Bafokeng<br>
+            Board Chairperson</p>
+    </div>
+
         <!-- Principal's Letter -->
         <div class="scope-col" onclick="openModal()">
             <h3>Principal's Letter</h3>
@@ -90,6 +95,42 @@
 </div>
 
 <!-- Modal -->
+
+<div id="boardModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeBoardModal()">&times;</span>
+      
+      <div class="principal-header">
+          <img src="assets/Elmie.jpg" alt="Board Chairperson" class="principal-img"/>
+          <div class="principal-info">
+              <h3>Dr Elmie Castleman</h3>
+              <p>Kitsong Schools of The Royal Bafokeng</p>
+              <p>Board Chairperson</p>
+          </div>
+      </div>
+
+      <div class="letter-content">
+          <p>As we turn the pages of this yearbook, we find ourselves immersed in a tapestry of memories — each thread woven with care, dedication, and unwavering commitment. The 2023 academic year has been a remarkable journey, one that has tested our mettle and revealed the true essence of our Kitsong family.</p>
+          
+          <p>In these pages, you will encounter snapshots frozen in time: the laughter echoing through the corridors, the late-night study sessions, the triumphant victories on the sports field, and the quiet moments of reflection. Our students, with their boundless curiosity and insatiable thirst for knowledge, have illuminated our classrooms. Our teachers, the architects of inspiration, have nurtured young minds and kindled the flames of passion. And our parents, steadfast pillars of support, have stood by us through every challenge.</p>
+          
+          <p>Amidst the chaos of assignments, exams, and extra-curricular pursuits, we discovered resilience. We witnessed the indomitable spirit that refuses to yield, even when faced with adversity. Our Kitsong community rallied together, finding solace in shared dreams and collective aspirations. We celebrated not only academic achievements but also acts of kindness, empathy, and compassion—the intangible qualities that define us.</p>
+          
+          <p>To our graduating seniors, as you prepare to spread your wings and soar beyond these walls, remember that Kitsong will forever be your compass. Carry with you the values instilled here—the pursuit of excellence, the embrace of diversity, and the unwavering belief that you can change the world. Your legacy is etched in the very fabric of this yearbook.</p>
+          
+          <p>As Chairperson, I extend my deepest gratitude to each contributor, whether through words, art, or photography. Your creativity has breathed life into these pages, capturing the essence of our community.</p>
+          
+          <p>May this yearbook serve as a time capsule—a testament to our shared journey. Let it remind us that even in the face of challenges, we remain resilient, united, and bound by the golden thread of Kitsong.</p>
+          
+          <div class="quote">
+              <p>Celebrating Resilience</p>
+              <p>and Excellence in</p>
+              <p>Education</p>
+          </div>
+      </div>
+  </div>
+</div>
+
 <div id="principalModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -241,31 +282,32 @@
     <!--Facilities-->
     <!--must aquire all the information related to this section from Kitsong school-->
     <!--H3 tags and images aswell as the p tags-->
-    <section class="facilities">
-      <div class="row">
-        <div class="facilities-col active">
-          <img src="assets/Xmas gifts.jpg" alt="Christmas Gifting Event" />
-          <div class="content">
-            <h3>Xmas Gifting</h3>
-            <p>Broader curriculum including sport, culture, leadership, spirituality and environmental education</p>
+    <div class="main-section">
+      <h1>Kaleidoscope of Memories</h1>
+      <section class="facilities">
+          <div class="row">
+              <div class="facilities-col active">
+                  <img src="assets/Xmas gifts.jpg" alt="Christmas Gifting Event" />
+                  <div class="content">
+                      <h3>Xmas Gifting</h3>
+                      <p>Broader curriculum including sport, culture, leadership, spirituality and environmental education</p>
+                  </div>
+              </div>
+              <div class="facilities-col">
+                  <img src="assets/NBA.jpg" alt="NBA Her Time to Play Event" />
+                  <div class="content">
+                      <h3>NBA THEME: HER TIME TO PLAY!</h3>
+                      <p>We're grateful for partners like MBA and RBS who support our mission to develop confident, ambitious, and determined young leaders.</p>
+                  </div>
+              </div>
+              <div class="facilities-col">
+                  <img src="assets/literacy_day.jpg" alt="International Literacy Day" />
+                  <div class="content">
+                      <h3>INTERNATIONAL LITERACY DAY CELEBRATION</h3>
+                      <p>Our students had an incredible time participating in the speech, poetry, and spelling competitions, and we're beaming with pride at their achievements!</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="facilities-col">
-          <img src="assets/NBA.jpg" alt="NBA Her Time to Play Event" />
-          <div class="content">
-            <h3>NBA THEME: HER TIME TO PLAY!</h3>
-            <p>We're grateful for partners like MBA and RBS who support our mission to develop confident, ambitious, and determined young leaders.</p>
-          </div>
-        </div>
-        <div class="facilities-col">
-          <img src="assets/literacy_day.jpg" alt="International Literacy Day" />
-          <div class="content">
-            <h3>INTERNATIONAL LITERACY DAY CELEBRATION</h3>
-            <p>Our students had an incredible time participating in the speech, poetry, and spelling competitions, and we're beaming with pride at their achievements!</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
 
@@ -361,15 +403,15 @@
     // Modal functionality
     // Global window click handler
 window.onclick = function(event) {
+    const boardModal = document.getElementById("boardModal");
     const principalModal = document.getElementById("principalModal");
     const deputyModal = document.getElementById("deputyModal");
     const staffModal = document.getElementById("staffModal");
     
-    if (event.target === principalModal) {
-        closeAllModals();
-    } else if (event.target === deputyModal) {
-        closeAllModals();
-    } else if (event.target === staffModal) {
+    if (event.target === principalModal || 
+        event.target === deputyModal || 
+        event.target === staffModal || 
+        event.target === boardModal) {
         closeAllModals();
     }
 }
@@ -379,7 +421,8 @@ function closeAllModals() {
     const modals = [
         document.getElementById("principalModal"),
         document.getElementById("deputyModal"),
-        document.getElementById("staffModal")
+        document.getElementById("staffModal"),
+        document.getElementById("boardModal")
     ];
     
     modals.forEach(modal => {
@@ -394,6 +437,11 @@ function closeAllModals() {
 // Individual modal open functions
 function openModal() {
     const modal = document.getElementById("principalModal");
+    openModalCommon(modal);
+}
+
+function openBoardModal() {
+    const modal = document.getElementById("boardModal");
     openModalCommon(modal);
 }
 
@@ -423,6 +471,10 @@ function openModalCommon(modal) {
 
 // Individual close functions now use the common close
 function closeModal() {
+    closeAllModals();
+}
+
+function closeBoardModal() {
     closeAllModals();
 }
 
