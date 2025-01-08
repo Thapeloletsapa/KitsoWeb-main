@@ -363,136 +363,98 @@
       }
 
       // Close modal when clicking the x button or outside the modal
-      document.addEventListener("DOMContentLoaded", function () {
-        var modals = document.getElementsByClassName("modal");
-        var closes = document.getElementsByClassName("close");
-
-        for (let close of closes) {
-          close.onclick = function () {
-            this.parentElement.parentElement.style.display = "none";
-          };
-        }
-
-        window.onclick = function (event) {
-          for (let modal of modals) {
-            if (event.target == modal) {
-              modal.style.display = "none";
-            }
-          }
-        };
-      });
-    // Modal functionality
-    function openModal() {
-    const modal = document.getElementById("principalModal");
-    modal.style.display = "flex";  // Changed to flex for centering
-    document.body.style.overflow = "hidden";
     
-    // Scroll modal content to top when opening
-    const modalContent = modal.querySelector('.modal-content');
-    if (modalContent) {
-        modalContent.scrollTop = 0;
+    // Modal functionality
+    // Global window click handler
+window.onclick = function(event) {
+    const principalModal = document.getElementById("principalModal");
+    const deputyModal = document.getElementById("deputyModal");
+    const staffModal = document.getElementById("staffModal");
+    
+    if (event.target === principalModal) {
+        closeAllModals();
+    } else if (event.target === deputyModal) {
+        closeAllModals();
+    } else if (event.target === staffModal) {
+        closeAllModals();
     }
 }
 
-
-function closeModal() {
-    const modal = document.getElementById("principalModal");
-    modal.style.display = "none";
+// Unified close function for all modals
+function closeAllModals() {
+    const modals = [
+        document.getElementById("principalModal"),
+        document.getElementById("deputyModal"),
+        document.getElementById("staffModal")
+    ];
+    
+    modals.forEach(modal => {
+        if (modal) {
+            modal.style.display = "none";
+        }
+    });
+    
     document.body.style.overflow = "visible";
 }
 
-// Close modal when clicking outside
-window.onclick = function(event) {
+// Individual modal open functions
+function openModal() {
     const modal = document.getElementById("principalModal");
-    if (event.target === modal) {
-        closeModal();
-    }
-   
+    openModalCommon(modal);
 }
 
-// Close modal with escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        closeModal();  // Use the same closeModal function
-    }
-});
-
-// Deputy Principal Modal Functions
 function openDeputyModal() {
     const modal = document.getElementById("deputyModal");
-    modal.style.display = "flex";  // Use flex for centering
-    document.body.style.overflow = "hidden";
-    
-    // Scroll modal content to top when opening
-    const modalContent = modal.querySelector('.modal-content');
-    if (modalContent) {
-        modalContent.scrollTop = 0;
+    openModalCommon(modal);
+}
+
+function openStaffModal() {
+    const modal = document.getElementById("staffModal");
+    openModalCommon(modal);
+}
+
+// Common modal opening logic
+function openModalCommon(modal) {
+    if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        
+        // Scroll modal content to top
+        const modalContent = modal.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.scrollTop = 0;
+        }
     }
+}
+
+// Individual close functions now use the common close
+function closeModal() {
+    closeAllModals();
 }
 
 function closeDeputyModal() {
-    const modal = document.getElementById("deputyModal");
-    modal.style.display = "none";
-    document.body.style.overflow = "visible";
-}
-
-// Close deputy modal when clicking outside
-window.onclick = function(event) {
-    const deputyModal = document.getElementById("deputyModal");
-    if (event.target === deputyModal) {
-        closeDeputyModal();
-    }
-}
-
-// Close deputy modal with escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        closeDeputyModal();
-    }
-});
-
-// Prevent modal content clicks from closing the modal
-document.querySelector('#deputyModal .modal-content').addEventListener('click', function(event) {
-    event.stopPropagation();
-});
-
-// Staff Modal Functions
-function openStaffModal() {
-    const modal = document.getElementById("staffModal");
-    modal.style.display = "flex";
-    document.body.style.overflow = "hidden";
-    
-    // Scroll modal content to top when opening
-    const modalContent = modal.querySelector('.modal-content');
-    if (modalContent) {
-        modalContent.scrollTop = 0;
-    }
+    closeAllModals();
 }
 
 function closeStaffModal() {
-    const modal = document.getElementById("staffModal");
-    modal.style.display = "none";
-    document.body.style.overflow = "visible";
+    closeAllModals();
 }
 
-// Close staff modal when clicking outside
-window.onclick = function(event) {
-    const staffModal = document.getElementById("staffModal");
-    if (event.target === staffModal) {
-        closeStaffModal();
-    }
-}
-
-// Close staff modal with escape key
+// Single escape key handler
 document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
-        closeStaffModal();
+        closeAllModals();
     }
 });
 
 // Prevent modal content clicks from closing the modal
-document.querySelector('#staffModal .modal-content').addEventListener('click', function(event) {
-    event.stopPropagation();
+document.addEventListener('DOMContentLoaded', function() {
+    const modalContents = document.querySelectorAll('.modal-content');
+    modalContents.forEach(content => {
+        content.addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+    });
 });
     </script>
   </body>
