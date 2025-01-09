@@ -73,25 +73,41 @@
 
     
     <section class="values">
-      <p>At Kitsong Schools of the Royal Bafokeng, our core 
-        values serve as the guiding principles that shape our 
-        actions, decisions, and interactions within our school 
-        community. These values are not merely words on a 
-        page but are deeply ingrained in everything we do, 
-        from our daily routines to our long-term goals. Allow 
-        us to elaborate on each of our core values:</p>
       <div class="container">
         <div class="values-logos">
           <h1 class="core-values">Core Values</h1>
           <div class="logo-container">
-            <img src="assets/gratitude.png" alt="Gratitude" class="logo-item" />
-            <img src="assets/knowledge.png" alt="Knowledge" class="logo-item" />
-            <img src="assets/innovation.png" alt="Innovation" class="logo-item" />
-            <img src="assets/teamwork.png" alt="Teamwork" class="logo-item" />
-            <img src="assets/sacred.png" alt="Sacred" class="logo-item" />
-            <img src="assets/optimism.png" alt="Optimism" class="logo-item" />
-            <img src="assets/nobility.png" alt="Nobility" class="logo-item" />
+            <a href="gratitude.html">
+              <img src="assets/gratitude.png" alt="Gratitude" class="logo-item" />
+            </a>
+            <a href="knowledge.html">
+              <img src="assets/knowledge.png" alt="Knowledge" class="logo-item" />
+            </a>
+            <a href="innovation.html">
+              <img src="assets/innovation.png" alt="Innovation" class="logo-item" />
+            </a>
+            <a href="teamwork.html">
+              <img src="assets/teamwork.png" alt="Teamwork" class="logo-item" />
+            </a>
+            <a href="sacred.html">
+              <img src="assets/sacred.png" alt="Sacred" class="logo-item" />
+            </a>
+            <a href="optimism.html">
+              <img src="assets/optimism.png" alt="Optimism" class="logo-item" />
+            </a>
+            <a href="nobility.html">
+              <img src="assets/nobility.png" alt="Nobility" class="logo-item" />
+            </a>
           </div>
+        </div>
+        <div class="values-text">
+          <p>At Kitsong Schools of the Royal Bafokeng, our core 
+            values serve as the guiding principles that shape our 
+            actions, decisions, and interactions within our school 
+            community. These values are not merely words on a 
+            page but are deeply ingrained in everything we do, 
+            from our daily routines to our long-term goals. Allow 
+            us to elaborate on each of our core values:</p>
         </div>
       </div>
     </section>
@@ -126,30 +142,6 @@
         navLinks.style.right = "-200px";
       }
   
-      // Dropdown functionality with single card open at a time
-      document.querySelectorAll('.scope-col').forEach(card => {
-        const title = card.querySelector('h3');
-        const content = card.querySelector('.content');
-        
-        // Set initial state
-        content.style.maxHeight = "0px";
-        
-        title.addEventListener('click', () => {
-          const isActive = card.classList.contains('active');
-          
-          // Close all cards first
-          document.querySelectorAll('.scope-col').forEach(otherCard => {
-            otherCard.classList.remove('active');
-            otherCard.querySelector('.content').style.maxHeight = "0px";
-          });
-          
-          // If the clicked card wasn't active, open it
-          if (!isActive) {
-            card.classList.add('active');
-            content.style.maxHeight = content.scrollHeight + "px";
-          }
-        });
-      });
     </script>
   </body>
 </html>
