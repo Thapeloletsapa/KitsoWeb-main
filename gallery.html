@@ -40,11 +40,51 @@
 <section class="gallery-content">
   <div class="row">
     <div class="gallery-left">
-      <img src="assets/children_awards.jpg">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <!-- Placeholder images - replace src with your actual images -->
+            <div class="carousel-slide">
+                <img src="assets/Supporters.jpg" alt="Supporter 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports2.jpg" alt="Supporter 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sport 3.jpg" alt="Supporter 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 4.jpg" alt="Supporter 4">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 5.jpg" alt="Supporter 5">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 6.jpg" alt="Supporter 6">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 7.jpg" alt="Supporter 7">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 8.jpg" alt="Supporter 8">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 9.jpg" alt="Supporter 9">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/sports 10.jpg" alt="Supporter 10">
+            </div>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+        
+        <!-- Navigation Dots -->
+        <div class="carousel-dots"></div>
+    </div>
       <h2> Celebrating Excellence in Character!</h2>
-      <p>Today, we honored our Lower School students (Grades 1-5) with Attribute Awards!
-        Each student received a special recognition for demonstrating exceptional character traits such as kindness, responsibility, empathy, and more!</p>
-      <br>
+      <p>
+        Kitsong School takes immense pride in acknowledging the hard work and dedication of its students at the recently concluded Achievers Tea ☕. We celebrated the remarkable achievements of our students who continue to shine brightly in their academic and athletic pursuits. Here's to their continued success and perseverance in the journey ahead! ??🏆
       <p>We're proud of our young achievers!</p>
       <br>
       <p>We extend our gratitude to our dedicated teachers and caregivers who help shape these values.
@@ -54,7 +94,7 @@
 
       <br>
 
-      <img src="assets/science_lab.jpg"
+      <img src="assets/red shirts.jpg" />
       <h2> 🎓 Grade 11 PAT 🎓</h2>
       
       <p>Our Grade 11s had an incredible experience completing their Practical Assessment Task at Lebone II College. A huge thank you to Lebone II for hosting us and supporting our students' learning journey!</p>
@@ -96,19 +136,19 @@
       <span>10</span>
     </div>
     <div>
-      <span>Sports Day</span>
+      <span>Grade 1: Glimpse of greatness</span>
       <span>9</span>
     </div>
     <div>
-      <span>Sports Day</span>
+      <span>Grade 2: Glimpses of greatness</span>
       <span>8</span>
     </div>
     <div>
-      <span>Sports Day</span>
+      <span>Grade 3: Glimpses of greatness</span>
       <span>7</span>
     </div>
     <div>
-      <span>Sports Day</span>
+      <span>Grade 4: Glimpses of greatness</span>
       <span>6</span>
     </div>
     </div>
@@ -161,6 +201,60 @@
   function hideMenu(){
     navLinks.style.right = "-200px";
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.querySelector('.carousel-wrapper');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
+    let currentIndex = 0;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    // Navigation functions
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(currentIndex);
+    }
+    
+    // Event listeners
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+    
+    // Optional: Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+});
 </script>
 
 
