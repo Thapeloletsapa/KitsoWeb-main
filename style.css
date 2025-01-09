@@ -1276,8 +1276,16 @@ body {
   padding: 60px 0;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: flex-start;
+}
+
 .gallery-left {
-  flex-basis: 65%;
+  flex: 1;  /* Takes up available space */
+  max-width: 60%;  /* Limits the width */
 }
 
 .gallery-left img {
@@ -1303,6 +1311,8 @@ body {
   height: 600px;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 15px;  /* Matches sports card style */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Matches sports card shadow */
 }
 
 .carousel-wrapper {
@@ -1374,24 +1384,151 @@ body {
 
 
 .gallery-right {
-  flex-basis: 32%;
+  flex: 1;  /* Takes up available space */
+  max-width: 35%;  /* Limits the width */
+  margin-top: 0;  /* Remove top margin to align with carousel */
+  height: 600px;
 }
-
-.gallery-right h3 {
-  background: #f44336;
-  color: #fff;
-  padding: 7px 0;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.gallery-right div {
+.sports-content {
+  height: 100%;  /* Make it fill the container */
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.sports-title {
+  color: #f44336;
+  font-size: 2em;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #f44336;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.sports-card {
+  flex: 1;
+  background: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: calc(100% - 80px); /* Adjust based on title height */
+}
+
+.sports-text {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  /* Styling the scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #f44336 #f5f5f5;
+}
+
+/* Webkit scrollbar styles */
+.sports-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sports-text::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.sports-text::-webkit-scrollbar-thumb {
+  background: #f44336;
+  border-radius: 4px;
+}
+
+.sports-text p {
   color: #555;
-  padding: 8px;
-  box-sizing: border-box;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.sports-achievements {
+  padding: 20px;
+  background: white;
+  border-top: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-5px);
+  background: #f44336;
+}
+
+.achievement-badge:hover .badge-number,
+.achievement-badge:hover .badge-text {
+  color: white;
+}
+
+.badge-number {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #f44336;
+  margin-bottom: 5px;
+}
+
+.badge-text {
+  font-size: 0.9em;
+  color: #666;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column;
+  }
+  
+  /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .gallery-right {
+    height: 500px; /* Slightly smaller on mobile */
+  }
+  
+  .sports-title {
+    font-size: 1.8em;
+  }
+}
+  .gallery-left,
+  .gallery-right {
+    max-width: 100%;
+  }
+  
+  .carousel-container {
+    margin-bottom: 30px;
+  }
 }
 
 .comment-box {
