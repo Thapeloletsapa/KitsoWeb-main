@@ -121,52 +121,90 @@
 
     <h2> Celebrating Excellence in Character!</h2>
     <br>
-    <div class="gallery-left">
-      <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <!-- Placeholder images - replace src with your actual images -->
-            <div class="carousel-slide">
-                <img src="assets/culture 1.jpg" alt="culture 1">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 2.jpg" alt="culture 2">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 3.jpg" alt="Supporter 3">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 4.jpg" alt="Supporter 4">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 5.jpg" alt="Supporter 5">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 6.jpg" alt="Supporter 6">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 7.jpg" alt="Supporter 7">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 8.jpg" alt="Supporter 8">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/culture 9.jpg" alt="Supporter 9">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/drama-class.jpg" alt="drama-class">
-            </div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button class="carousel-button prev">&#10094;</button>
-        <button class="carousel-button next">&#10095;</button>
+    <div class="row">
+      <div class="gallery-left">
+          <div class="carousel-container">
+            <div class="gallery-left">
+              <div class="carousel-container">
+                <div class="carousel-wrapper">
+                   
+                    <div class="carousel-slide">
+                        <img src="assets/culture 1.jpg" alt="culture 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 2.jpg" alt="culture 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 3.jpg" alt="culture 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 4.jpg" alt="culture 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 5.jpg" alt="culture 5">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 6.jpg" alt="culture 6">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 7.jpg" alt="culture 7">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 8.jpg" alt="culture 8">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/culture 9.jpg" alt="culture 9">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/Drum.jpg" alt="student playing drum">
+                    </div>
+                </div>
         
-        <!-- Navigation Dots -->
-        <div class="carousel-dots"></div>
-
+                <!-- Navigation Arrows -->
+                <button class="carousel-button prev">&#10094;</button>
+                <button class="carousel-button next">&#10095;</button>
+                
+                <!-- Navigation Dots -->
+                <div class="carousel-dots"></div>
         
-    </div>
-    </div>
+                
+            </div>
+            </div>
+          </div>
+      </div>
+  
+      <div class="gallery-right">
+          <div class="culture-content">
+              <h1 class="culture-title">Culture</h1>
+              <div class="culture-card">
+                  <div class="culture-text">
+                      <p>Kitsong has a vibrant cultural curriculum involving drama, film, debating and singing.</p>
+                      <p>Kitsong learners have become widely known for their short film productions, which are scripted, acted, filmed</p>
+                      <p>The film "I have something to tell you " Won Best Film in the 12 - 18 year old category at an international film festival in Philadelphia, USA. </p>
+                      <p>In the first half of 2019, 6 short films were produced and are being entered into a range of festivals nationally and internationally. </p>
+                      <p>In 2021 our short film; Find me by the River was nominated in Africa Movie Academy Awards (AMAA) held in Nigeria Lagos. The Film higlighted the impact and issues around Bullying in schools and around us.</p>
+                  </div>
+                  <div class="culture-achievements">
+                      <div class="achievement-badge">
+                          <span class="badge-number">4</span>
+                          <span class="badge-text">Art Forms</span>
+                      </div>
+                      <div class="achievement-badge">
+                          <span class="badge-number">100%</span>
+                          <span class="badge-text">Participation</span>
+                      </div>
+                      <div class="achievement-badge">
+                          <span class="badge-number">★</span>
+                          <span class="badge-text">Excellence</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    
+
+    
     <p>
       Kitsong School takes immense pride in acknowledging the hard work and dedication of its students at the recently concluded Achievers Tea ☕. We celebrated the remarkable achievements of our students who continue to shine brightly in their academic and athletic pursuits. Here's to their continued success and perseverance in the journey ahead! ??🏆
     <p>We're proud of our young achievers!</p>
@@ -262,56 +300,67 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    const wrapper = document.querySelector('.carousel-wrapper');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const dotsContainer = document.querySelector('.carousel-dots');
+    // Get all carousel containers
+    const carousels = document.querySelectorAll('.carousel-container');
     
-    let currentIndex = 0;
-    
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-    
-    const dots = document.querySelectorAll('.dot');
-    
-    // Navigation functions
-    function updateDots() {
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+    // Initialize each carousel
+    carousels.forEach((carousel, carouselIndex) => {
+        const wrapper = carousel.querySelector('.carousel-wrapper');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevButton = carousel.querySelector('.prev');
+        const nextButton = carousel.querySelector('.next');
+        const dotsContainer = carousel.querySelector('.carousel-dots');
+        
+        let currentIndex = 0;
+        
+        // Clear existing dots first
+        dotsContainer.innerHTML = '';
+        
+        // Create dots for this carousel
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
         });
-    }
-    
-    function goToSlide(index) {
-        currentIndex = index;
-        wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateDots();
-    }
-    
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
-    }
-    
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(currentIndex);
-    }
-    
-    // Event listeners
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-    
-    // Optional: Add keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') prevSlide();
-        if (e.key === 'ArrowRight') nextSlide();
+        
+        const dots = carousel.querySelectorAll('.dot');
+        
+        // Navigation functions specific to this carousel
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        function goToSlide(index) {
+            currentIndex = index;
+            wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            goToSlide(currentIndex);
+        }
+        
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            goToSlide(currentIndex);
+        }
+        
+        // Event listeners for this carousel
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+        
+        // Add keyboard navigation only for the first carousel to avoid conflicts
+        if (carouselIndex === 0) {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+        }
     });
 });
 </script>

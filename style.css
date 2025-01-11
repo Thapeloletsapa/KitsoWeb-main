@@ -706,7 +706,7 @@ h3 {
   height: 70vh;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
-    url(assets/trimmed-name.jpg);
+    url(assets/background.jpeg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -1285,7 +1285,8 @@ body {
 
 .gallery-left {
   flex: 1;  /* Takes up available space */
-  max-width: 60%;  /* Limits the width */
+  max-width: 60%; 
+  height: 600px; /* Limits the width */
 }
 
 .gallery-left img {
@@ -1329,7 +1330,7 @@ body {
 .carousel-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Navigation Buttons */
@@ -1528,6 +1529,101 @@ body {
   
   .carousel-container {
     margin-bottom: 30px;
+  }
+}
+
+/* Culture section styles */
+.culture-content {
+  height: 100%;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.culture-title {
+  color: #1a365d;
+  font-size: 2em;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #f4d58d;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.culture-card {
+  flex: 1;
+  background: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: calc(100% - 80px);
+}
+
+.culture-text {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #1a365d #f5f5f5;
+}
+
+.culture-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.culture-text::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.culture-text::-webkit-scrollbar-thumb {
+  background: #f44336;
+  border-radius: 4px;
+}
+
+.culture-text p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.culture-achievements {
+  padding: 20px;
+  background: white;
+  border-top: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Update the row styles to ensure consistent spacing */
+.row {
+  margin-bottom: 50px;
+}
+
+/* Responsive adjustments for culture section */
+@media (max-width: 1024px) {
+  .culture-content {
+    height: 500px;
+  }
+  
+  .culture-title {
+    font-size: 1.8em;
   }
 }
 
