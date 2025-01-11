@@ -203,32 +203,113 @@
               </div>
           </div>
       </div>
+
+
+      <!-- Third Carousel Section -->
+<div class="row">
+  <div class="gallery-left">
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <!-- Add 10 placeholder slides -->
+        <div class="carousel-slide">
+          <img src="assets/academics.jpg" alt="Academic 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/Knowledge.jpg" alt="Academic 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/grade 10s.jpg" alt="Academic 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/academics 2.jpg" alt="Academic 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/academics 3.jpg" alt="Academic 5">
+        </div>
+        <div class="carousel-slide">
+          <img src="assets/academics 4.jpg" alt="Academic 6">
+        </div>
+        <!-- Repeat for 9 more slides -->
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+      <div class="carousel-dots"></div>
+    </div>
+  </div>
+
+  <div class="gallery-right">
+    <div class="academics-content">
+      <h1 class="academics-title">Academics</h1>
+      <div class="academics-card">
+        <div class="academics-text">
+          <p>• In 2023, 43 students wrote the examinations and 
+            43 passed. The 100.00% pass rate is an improvement 
+            of 3,34% on the 2022 pass rate (96.66%).
+            <br>
+            • In the history of Kitsong Schools, the Class of 2023 
+            made a significant milestone by achieving a 100% 
+            success rate, marking it the first time.   
+            <br>
+            • A notable 79.06% of the cohort successfully 
+              attained a Bachelor's Degree (BD) pass, reflecting a 
+              significant improvement compared to the 2022 
+              percentage of 76.66%. This represents a positive 
+              increase of 2.4 percentage points.    
+            <br>
+            • The number of distinctions surged from 12 in 2022 
+            to an impressive 34 in 2023 amongst 21 students, 
+            marking a notable increase of 22 distinctions. 
+            (notable increase of approximately 43.33%)
+          </p>
+        </div>
+        <div class="academics-achievements">
+          <div class="achievement-badge">
+            <span class="badge-number">100%</span>
+            <span class="badge-text">Pass Rate</span>
+          </div>
+          <div class="achievement-badge">
+            <span class="badge-number">79%</span>
+            <span class="badge-text">Bachelor's</span>
+          </div>
+          <div class="achievement-badge">
+            <span class="badge-number">100%</span>
+            <span class="badge-text">University</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fourth Carousel Section -->
+<div class="row">
+  <!-- Similar structure to third carousel section -->
+</div>
+
+<!-- Gallery Cards Section -->
+<div class="gallery-cards">
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="gallery-card">
+      <div class="card-image">
+        <img src="/api/placeholder/300/200" alt="Gallery Image 1">
+      </div>
+      <div class="card-content">
+        <h3>School Life</h3>
+        <p>Experience the vibrant daily life at Kitsong Independent School.</p>
+      </div>
+    </div>
+    <!-- Repeat for 9 more cards -->
+  </div>
+</div>
+
   </div>
     
 
-    
-    <p>
-      Kitsong School takes immense pride in acknowledging the hard work and dedication of its students at the recently concluded Achievers Tea ☕. We celebrated the remarkable achievements of our students who continue to shine brightly in their academic and athletic pursuits. Here's to their continued success and perseverance in the journey ahead! ??🏆
-    <p>We're proud of our young achievers!</p>
-    <br>
-    <p>We extend our gratitude to our dedicated teachers and caregivers who help shape these values.
-      To our parents and guardians, let's continue to nurture and encourage these attributes in our children.
-      Together, let's raise a generation of compassionate, responsible, and thoughtful leaders!
-    </p>
-
-    <br>
+  
 
     <img src="assets/red shirts.jpg" />
-    <h2> 🎓 Grade 11 PAT 🎓</h2>
-    
-    <p>Our Grade 11s had an incredible experience completing their Practical Assessment Task at Lebone II College. A huge thank you to Lebone II for hosting us and supporting our students' learning journey!</p>
-    <br>
-    <p>We're proud of our young achievers!</p>
-    <br>
-    <p>We extend our gratitude to our dedicated teachers and caregivers who help shape these values.
-      To our parents and guardians, let's continue to nurture and encourage these attributes in our children.
-      Together, let's raise a generation of compassionate, responsible, and thoughtful leaders!</p>
-
+  
       <br>
       <img src="assets/Enki_Pitsoe.jpg"
 
@@ -302,10 +383,8 @@
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Get all carousel containers
     const carousels = document.querySelectorAll('.carousel-container');
     
-    // Initialize each carousel
     carousels.forEach((carousel, carouselIndex) => {
         const wrapper = carousel.querySelector('.carousel-wrapper');
         const slides = carousel.querySelectorAll('.carousel-slide');
@@ -315,10 +394,10 @@
         
         let currentIndex = 0;
         
-        // Clear existing dots first
+        // Clear existing dots
         dotsContainer.innerHTML = '';
         
-        // Create dots for this carousel
+        // Create dots
         slides.forEach((_, index) => {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -329,7 +408,6 @@
         
         const dots = carousel.querySelectorAll('.dot');
         
-        // Navigation functions specific to this carousel
         function updateDots() {
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentIndex);
@@ -352,17 +430,15 @@
             goToSlide(currentIndex);
         }
         
-        // Event listeners for this carousel
+        // Event listeners
         prevButton.addEventListener('click', prevSlide);
         nextButton.addEventListener('click', nextSlide);
         
-        // Add keyboard navigation only for the first carousel to avoid conflicts
-        if (carouselIndex === 0) {
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'ArrowLeft') prevSlide();
-                if (e.key === 'ArrowRight') nextSlide();
-            });
-        }
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Stop auto-advance when user interacts with carousel
+        carousel.addEventListener('mouseenter', () => clearInterval(nextSlide));
     });
 });
 </script>
