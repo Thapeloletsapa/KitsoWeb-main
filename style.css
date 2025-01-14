@@ -1740,11 +1740,15 @@ body {
     font-size: 1.8em;
   }
 }
+
+
 /* Gallery Cards Section */
 .gallery-cards {
   width: 80%;
   margin: 50px auto;
   padding: 20px 0;
+  flex: 1;
+  max-width: 45%; /* Adjust the width to prevent overflowing */
 }
 
 .cards-container {
@@ -1760,6 +1764,13 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+
+.gallery-cards-row {
+  display: flex;
+  gap: 30px; /* Add space between cards */
+  justify-content: center; /* Center the cards horizontally */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .gallery-card:hover {
@@ -1788,10 +1799,52 @@ body {
   font-size: 1.2em;
 }
 
-.card-content p {
+/* Read More Styles */
+.read-more-container {
+  position: relative;
+}
+
+.read-more-text {
   color: #555;
   line-height: 1.5;
   font-size: 0.9em;
+  margin-bottom: 0;
+  overflow: hidden;
+  max-height: 4.5em; /* Show 3 lines initially */
+  transition: max-height 0.3s ease;
+}
+
+.read-more-expanded {
+  display: none;
+}
+
+.read-more-container.expanded .read-more-text {
+  max-height: 1000px;
+}
+
+.read-more-container.expanded .read-more-expanded {
+  display: inline;
+}
+
+.read-more-container.expanded .read-more-btn .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #1a365d;
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
 }
 
 /* Responsive adjustments */
@@ -1830,6 +1883,11 @@ body {
   .sub-header h1 {
     margin-top: 120px;
     font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-cards {
+    max-width: 100%; /* Full width on smaller screens */
   }
 }
 
