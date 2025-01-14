@@ -66,49 +66,45 @@
       </div>
     </section>
 
-    <!--Scope-->
-
-    <section class="scope">
-
-
-
-<div class="scope">
+  <!--  Scope Section -->
+<section class="scope">
+  <div class="scope">
     <div class="row">
-
       <div class="scope-col" onclick="openBoardModal()">
         <h3>Board Chairperson's Letter</h3>
         <img src="assets/Elmie.jpg" alt="Board Chairperson"/>
-        <p><strong> Dr Elmie Castleman </strong><br>
-            Kitsong Schools of The Royal Bafokeng<br>
-            Board Chairperson</p>
+        <p><strong>Dr Elmie Castleman</strong><br>
+          Kitsong Schools of The Royal Bafokeng<br>
+          Board Chairperson</p>
+      </div>
+
+      <div class="scope-col" onclick="openModal()">
+        <h3>Principal's Letter</h3>
+        <img src="assets/Principal.jpeg" alt="Principal"/>
+        <p><strong>Mme Olga Motshwanedi-Marimo</strong><br>
+          Kitsong Schools of The Royal Bafokeng<br>
+          Principal</p>
+      </div>
+
+      <div class="scope-col" onclick="openDeputyModal()">
+        <h3>Deputy's Letter</h3>
+        <img src="assets/Deputy.jpeg" alt="Deputy Principal"/>
+        <p><strong>Rre Yaw Fosu-Amoah</strong><br>
+          Kitsong Schools of The Royal Bafokeng<br>
+          Deputy Principal</p>
+      </div>
     </div>
-
-        <!-- Principal's Letter -->
-        <div class="scope-col" onclick="openModal()">
-            <h3>Principal's Letter</h3>
-            <img src="assets/Principal.jpeg" alt="Principal"/>
-            <p><strong>Mme Olga Motshwanedi-Marimo </strong><br>
-                Kitsong Schools of The Royal Bafokeng<br>
-                Principal</p>
-        </div>
-
-        <!-- Deputy's Letter -->
-        <div class="scope-col" onclick="openDeputyModal()">
-            <h3>Deputy's Letter</h3>
-            <img src="assets/Deputy.jpeg" alt="Deputy Principal"/>
-            <p><strong> Rre Yaw Fosu-Amoah </strong><br>
-                Kitsong Schools of The Royal Bafokeng<br>
-                Deputy Principal</p>
-        </div>
-
-        <!-- Staff Letter -->
-        <div class="scope-col" onclick="openStaffModal()">
-            <h3>Staff Letter</h3>
-            <img src="assets/Staff.jpg" alt="Staff"/>
-            <p>As a team we believe in making personal <strong>Development Personal</strong></p>
-        </div>
+    
+    <!-- Staff card in its own row -->
+    <div class="row staff-row">
+      <div class="scope-col staff-col" onclick="openStaffModal()">
+        <h3>Staff Letter</h3>
+        <img src="assets/Staff.jpg" alt="Staff"/>
+        <p>As a team we believe in making personal <strong>Development Personal</strong></p>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 
 <!-- Modal -->
 
@@ -301,31 +297,41 @@
     <div class="main-section">
       <h1>Kaleidoscope of Memories</h1>
       <section class="facilities">
-          <div class="row">
-              <div class="facilities-col active">
-                  <img src="assets/Xmas gifts.jpg" alt="Christmas Gifting Event" />
-                  <div class="content">
-                      <h3>Xmas Gifting</h3>
-                      <p>Broader curriculum including sport, culture, leadership, spirituality and environmental education</p>
-                  </div>
-              </div>
-              <div class="facilities-col">
-                  <img src="assets/NBA.jpg" alt="NBA Her Time to Play Event" />
-                  <div class="content">
-                      <h3>NBA THEME: HER TIME TO PLAY!</h3>
-                      <p>We're grateful for partners like MBA and RBS who support our mission to develop confident, ambitious, and determined young leaders.</p>
-                  </div>
-              </div>
-              <div class="facilities-col">
-                  <img src="assets/literacy_day.jpg" alt="International Literacy Day" />
-                  <div class="content">
-                      <h3>INTERNATIONAL LITERACY DAY CELEBRATION</h3>
-                      <p>Our students had an incredible time participating in the speech, poetry, and spelling competitions, and we're beaming with pride at their achievements!</p>
-                  </div>
-              </div>
-          </div>
-
-
+        <div class="row">
+            <div class="facilities-col">
+                <div class="image-container">
+                    <img src="assets/back2school.jpg" alt="Christmas Gifting Event" />
+                </div>
+                <div class="content">
+                    <h3>Xmas Gifting</h3>
+                    <p>Broader curriculum including sport, culture, leadership, spirituality and environmental education</p>
+                </div>
+            </div>
+            
+            <div class="facilities-col">
+                <div class="image-container">
+                    <img src="assets/NBA.jpg" alt="NBA Her Time to Play Event" />
+                </div>
+                <div class="content">
+                    <h3>NBA THEME: HER TIME TO PLAY!</h3>
+                    <p>We're grateful for partners like MBA and RBS who support our mission to develop confident, ambitious, and determined young leaders.</p>
+                </div>
+            </div>
+            
+            <div class="facilities-col">
+                <div class="image-container">
+                    <img src="assets/literacy_day.jpg" alt="International Literacy Day" />
+                </div>
+                <div class="content">
+                    <h3>INTERNATIONAL LITERACY DAY CELEBRATION</h3>
+                    <p>Our students had an incredible time participating in the speech, poetry, and spelling competitions, and we're beaming with pride at their achievements!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
 
     <!--Testimonials-->
 
@@ -392,12 +398,23 @@
         Royal Bafokeng
       </p>
       <div class="icons">
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-twitter"></i>
+        <div>
+        <a href="https://web.facebook.com/Kitsongschool" target="_blank" rel="noopener noreferrer">
+        <i  class="fa fa-facebook"></i>
+        </a>
+        </div>
+        <div>
+          <a href="https://www.bafokenginstitute.org.za/" target="_blank" rel="noopener noreferrer">
+        <i class="fa fa-at"></i>
+          </a>
+        <a href="      https://www.instagram.com/kitsong_school?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
         <i class="fa fa-instagram"></i>
+        </a>
+        </div>
+        <a href="https://youtu.be/ds5dBxy9k54?si=_fpms_4-PC5Na5rH" target="_blank" rel="noopener noreferrer">
         <i class="fa fa-youtube"></i>
+        </a>
       </div>
-     
     </section>
 
     <!--Java Script for toggle menu-->
