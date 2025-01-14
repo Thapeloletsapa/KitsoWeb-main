@@ -14,7 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -24,7 +27,9 @@
   <body>
     <section class="sub-header">
       <nav>
-        <a href="index.html"><img src="assets/Kitsong Independat School.png" /></a>
+        <a href="index.html"
+          ><img src="assets/Kitsong Independat School.png"
+        /></a>
         <div class="nav-links" id="navLinks">
           <i class="fa fa-times" onclick="hideMenu()"></i>
           <ul>
@@ -35,9 +40,9 @@
             <li class="dropdown">
               <a href="">EXPLORE <i class="fa fa-chevron-down"></i></a>
               <ul class="dropdown-content">
-                <li><a href="kitsong-high-school.html">KITSONG HIGH SCHOOL</a></li>
-                <li><a href="kitsong-primary-school.html">KITSONG PRIMARY SCHOOL</a></li>
-               
+                <li>
+                  <a href="kitsong-high-school.html">KITSONG HIGH SCHOOL</a>
+                </li>
               </ul>
             </li>
             <li><a href="about.html">About</a></li>
@@ -46,100 +51,89 @@
         <i class="fa fa-bars" onclick="showMenu()"></i>
       </nav>
       <h1>WE OFFER THE BELOW SUBJECTS IN PRIMARY SCHOOL</h1>
-     
     </section>
-
-
-
 
     <section class="about-us">
       <div class="row">
         <div class="about-col">
-          <h2>
-            Kitsong Primary School
-          </h2>
+          <h2>Kitsong Primary School</h2>
           <p>
-       Kitsong School provides a holistic primary school in a safe and nurturing enviroment while promoting the physical, social,
-        emotional, and intellectual development of children. 
-       <br>
-       Our Carefully thought out programme provides <strong>CURRICULUM ASSESSMENT POLICY STATEMENT (CAPS)</strong>
-that is enhanced by other programmes like Khan Academy A-Z learning and ABUCUS
-          </p>
-          
-          <h2>
-            Grade R - 3
-          </h2>
-          <p>
-            English (Home language), Setswana (First Additional language), Afrikaans (SAL), Life Skills, Mathematics.
+            Kitsong School provides a holistic primary school in a safe and
+            nurturing enviroment while promoting the physical, social,
+            emotional, and intellectual development of children.
+            <br />
+            Our Carefully thought out programme provides
+            <strong>CURRICULUM ASSESSMENT POLICY STATEMENT (CAPS)</strong>
+            that is enhanced by other programmes like Khan Academy A-Z learning
+            and ABUCUS
           </p>
 
-          <h2>
-            Grade 4 - 6
-          </h2>
+          <h2>Grade R - 3</h2>
           <p>
-            English (Home language), Setswana (First Additional language), Afrikaans (SAL), Life Skills, Mathematics, NS Tech, Social Science and Creative Arts
+            English (Home language), Setswana (First Additional language),
+            Afrikaans (SAL), Life Skills, Mathematics.
+          </p>
+
+          <h2>Grade 4 - 6</h2>
+          <p>
+            English (Home language), Setswana (First Additional language),
+            Afrikaans (SAL), Life Skills, Mathematics, NS Tech, Social Science
+            and Creative Arts
           </p>
         </div>
         <div class="about-col1">
           <img src="assets/birds.png" />
         </div>
       </div>
-      
     </section>
 
-    
-     
-    </section>
     <!---------  Footer ----------->
 
     <section class="footer">
       <h4>About us</h4>
 
-      <p>
-        Affordable high quality education for all children
-      </p>
+      <p>Affordable high quality education for all children</p>
       <div class="icons">
         <i class="fa fa-facebook"></i>
         <i class="fa fa-twitter"></i>
         <i class="fa fa-instagram"></i>
         <i class="fa fa-youtube"></i>
       </div>
-     
     </section>
 
     <!--Java Script for toggle menu-->
     <script>
       // Menu toggle
       var navLinks = document.getElementById("navLinks");
-  
+
       function showMenu() {
         navLinks.style.right = "0";
       }
       function hideMenu() {
         navLinks.style.right = "-200px";
       }
-  
+
       // Add this to your existing JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-  // For mobile menu dropdown toggle
-  const dropdownLink = document.querySelector('.dropdown > a');
-  
-  dropdownLink.addEventListener('click', function(e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      this.parentElement.classList.toggle('active');
-    }
-  });
-});
+      document.addEventListener("DOMContentLoaded", function () {
+        // For mobile menu dropdown toggle
+        const dropdownLink = document.querySelector(".dropdown > a");
 
-// Keep your existing menu functions
-function showMenu() {
-    navLinks.style.right = "0";
-}
+        dropdownLink.addEventListener("click", function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("active");
+          }
+        });
+      });
 
-function hideMenu() {
-    navLinks.style.right = "-200px";
-}
+      // Keep your existing menu functions
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
     </script>
   </body>
 </html>
