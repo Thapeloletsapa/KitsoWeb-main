@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-with, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Kitsong Independant School</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img src="assets/Kitsong Independat School.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="admissions.html">ADMISSIONS</a></li>
+            <li class="dropdown">
+              <a href="ourvalues.html">OUR VALUES <i class="fa fa-chevron-down"></i></a>
+              <ul class="dropdown-content">
+                <li><a href="gratitude.html">Gratitude</a></li>
+                <li><a href="knowledge.html">Knowledge</a></li>
+                <li><a href="innovation.html">Innovation</a></li>
+                <li><a href="teamwork.html">Teamwork</a></li>
+                <li><a href="sacred.html">Sacred</a></li>
+                <li><a href="optimism.html">Optimism</a></li>
+                <li><a href="nobility.html">Nobility</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>WE OFFER THE BELOW SUBJECTS IN HIGH SCHOOL</h1>
+     
+    </section>
+
+
+
+
+    <section class="about-us">
+      <div class="row">
+        <div class="about-col">
+          <h2>
+            Grade 7 - 9
+          </h2>
+          <p>
+        English (Home language), Setswana (First Additional language), Life Orientation, Mathematics, Natural Science, Social Science Technology, 
+        EMS and Creative Arts
+          </p>
+          <h2>
+            Grade 10 - 12 
+          </h2>
+          <p>
+            English (Home language), Setswana (First Additional language), Life Orientation, Mathematics, Mathemetical Literacy, Life Science, Physical Sciences,
+            Geography, Information Technology, Engineering Graphics and Design, Dramatic Arts
+          </p>
+        </div>
+        <div class="about-col1">
+          <img src="assets/birds.png" />
+        </div>
+      </div>
+      
+    </section>
+
+    
+     
+    </section>
+    <!---------  Footer ----------->
+
+    <section class="footer">
+      <h4>About us</h4>
+
+      <p>
+        Affordable high quality education for all children
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-youtube"></i>
+      </div>
+     
+    </section>
+
+    <!--Java Script for toggle menu-->
+    <script>
+      // Menu toggle
+      var navLinks = document.getElementById("navLinks");
+  
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+  
+      // Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+  // For mobile menu dropdown toggle
+  const dropdownLink = document.querySelector('.dropdown > a');
+  
+  dropdownLink.addEventListener('click', function(e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.parentElement.classList.toggle('active');
+    }
+  });
+});
+
+// Keep your existing menu functions
+function showMenu() {
+    navLinks.style.right = "0";
+}
+
+function hideMenu() {
+    navLinks.style.right = "-200px";
+}
+    </script>
+  </body>
+</html>
